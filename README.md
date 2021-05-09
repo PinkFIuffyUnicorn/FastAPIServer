@@ -30,4 +30,4 @@
 - Write more in depth test cases
 - Better responses for POST, PUT and DELETE methods (response in the same format as for GET)
 - Dynamic Query-ing (ability to Query the DB with URL parameters instead of using IDs)
-- Dynamic Update/Insert/Delete (ability to Update/Insert/Delete multiple records at once and not deleting them by ID)
+- Dynamic Update/Insert/Delete (ability to Update/Insert/Delete multiple records at once and not by ID)
