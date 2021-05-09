@@ -1,12 +1,8 @@
 # FastAPIServer
 
-## Always up
-- For better convenience I've deployed the API on Google APP Engine, so it can be accessed anytime
-- You can access Swagger UI on the following URL: `https://usersandgroupsgoapi.nw.r.appspot.com/docs`
-
 ## Usage
 - Usage of the API is documented with fastapi library, which has build in /docs functionality
-- You can access the docs on the following URL (after sucessfully running the API on Docker): `http://localhost:8000/docs`
+- You can access the docs (Swagger UI) on the following URL (after sucessfully running the API on Docker): `http://localhost:8000/docs`
 
 ## Used components with versions
 - Docker 3.3.3 (64133)
