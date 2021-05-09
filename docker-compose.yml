@@ -1,0 +1,26 @@
+version: "3"
+
+services:
+  mysql:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d/:ro
+
+  web:
+    build: .
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mysql
+    environment:
+      MODULE_DOCKER_DBTYPE: mysql
+      MODULE_DOCKER_DBNAME: mysql
+      MODULE_DOCKER_DBUSER: root
+      MODULE_DOCKER_DBPASS: root
