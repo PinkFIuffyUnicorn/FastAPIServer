@@ -18,18 +18,20 @@
 - For running the test cases you need to have python installed on your machine
 
 ## Running the API
-1. Download the source code from GitHub and unzip it to a desired location (**Important:** when you unzip the folder rename it to GoAPI, Github adds the name of the branch to the project name)
-2. In CMD (Command Line Terminal) move to where you have unzipped the repository on your local machine (to the GoAPI folder)
+1. Download the source code from GitHub and unzip it to a desired location
+2. In CMD (Command Line Terminal) move to where you have unzipped the repository on your local machine (to the FastAPIServer-main folder)
 3. Run the following command `docker-compose up --build` to build and set up the API in your Docker
 4. After sucessfully building and deploying the API on Docker, you can close the Terminal and run the API directly from Docker
 
 ## Test cases
-- All test cases are included in `endpoints_test.go`
-- You can run the tests by simply typing `go test -v` from your Terminal in the folder that you've unzipped the source code (GoAPI)
-- There are 8 test cases in total (for each function 1)
-- The API does not need to run in order to run the test cases
+- All test cases are included in `FastAPIServer-main/tests/testCases.py`
+- You can run the tests by simply typing `pytest tests\testsCases.py` from your Terminal in the folder that you've unzipped the source code (FastAPIServer-main)
+- There are four test cases in total (for each method one)
+- The API needs to be running in order to run the test cases
 
 ## Improvements
-- Add Encryption/Decryption to Passwords
 - Move some functions in other packages for better code readability
 - Write more in depth test cases
+- Better responses for POST, PUT and DELETE methods (response in the same format as for GET)
+- Dynamic Query-ing (ability to Query the DB with URL parameters instead of using IDs)
+- Dynamic Update/Insert/Delete (ability to Update/Insert/Delete multiple records at once and not deleting them by ID)
